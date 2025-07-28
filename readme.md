@@ -1,10 +1,10 @@
-# DocStructureX - Intelligent PDF Outline & Title Extractor
+#  Intelligent PDF Outline & Title Extractor
 
 ![Version](https://img.shields.io/badge/Version-10.0-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Build](https://img.shields.io/badge/Build-Docker-blueviolet.svg)
 
-DocStructureX is a production-ready, intelligent tool designed to extract structured outlines and accurate titles from PDF documents. It transforms raw PDFs into a clean, hierarchical JSON format, identifying the document's title and section headings (H1, H2, H3).
+This project is a production-ready, intelligent tool designed to extract structured outlines and accurate titles from PDF documents. It transforms raw PDFs into a clean, hierarchical JSON format, identifying the document's title and section headings (H1, H2, H3).
 
 This solution was iteratively engineered to overcome real-world challenges, including malformed titles, multi-line headers, boilerplate noise, and complex document layouts, making it a highly robust and reliable tool for document understanding.
 
@@ -19,7 +19,7 @@ This solution was iteratively engineered to overcome real-world challenges, incl
 
 ## How It Works: The V10 Architecture
 
-DocStructureX uses a sophisticated, multi-strategy approach to ensure accuracy and resilience.
+The project uses a sophisticated, multi-strategy approach to ensure accuracy and resilience.
 
 1.  **Title Extraction:**
     -   **Base Title Identification:** First, it finds the single text block with the highest visual score (font size, boldness) to reliably capture the main title.
@@ -34,7 +34,7 @@ DocStructureX uses a sophisticated, multi-strategy approach to ensure accuracy a
 ## Project Structure
 
 ```
-DocStructureX/
+The project/
 ├── input/                  # Place your input PDFs here
 ├── output/                 # Generated JSON outlines appear here
 ├── wheels/                 # Pre-downloaded Python packages for offline build
