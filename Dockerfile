@@ -12,15 +12,14 @@ LABEL description="Intelligent PDF Outline Extractor"
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file first to leverage Docker's layer caching.
+# Copy requirements and wheels first
 COPY requirements.txt .
+COPY wheels/ ./wheels/
 
-# Install system dependencies that PyMuPDF might need for rendering
-# and then install Python packages.
+# Install system dependencies, then install Python packages from local wheels
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    # Clean up apt cache to keep image small
     && rm -rf /var/lib/apt/lists/* \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir --find-links=./wheels -r requirements.txt
 
 # Copy the entire project context into the workdir
 COPY . .
