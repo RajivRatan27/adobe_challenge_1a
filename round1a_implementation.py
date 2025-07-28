@@ -201,7 +201,7 @@ def process_pdf(pdf_path):
     print(f"  Finished in {time.time() - start_time:.2f}s. Title found: '{title}'. Output saved to {output_path}")
 
 def main():
-    print("--- DocStructureX: PDF Outline Extractor ---")
+    print("--- docker: PDF Outline Extractor ---")
     if not os.path.exists(INPUT_DIR): os.makedirs(INPUT_DIR)
     if not os.path.exists(OUTPUT_DIR): os.makedirs(OUTPUT_DIR)
     pdf_files = [f for f in os.listdir(INPUT_DIR) if f.lower().endswith(".pdf")]
