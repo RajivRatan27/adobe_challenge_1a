@@ -66,7 +66,7 @@ This solution is designed for a **fully offline build**. The repository already 
 Open a terminal in the project root and run:
 
 ```bash
-docker build --platform linux/amd64 -t docstructurex:latest .
+docker build --platform linux/amd64 -t adobechallenge1a:latest .
 ```
 *(Note: The first time you run this, Docker may need to download the base `python:3.10` image if you don't have it cached locally. Subsequent builds will be completely offline.)*
 
@@ -79,7 +79,7 @@ docker run --rm \
     -v "$(pwd)/input:/app/input" \
     -v "$(pwd)/output:/app/output" \
     --network none \
-    docstructurex:latest
+    adobechallenge1a:latest
 ```
 ### Step 4: Check the Output
 
