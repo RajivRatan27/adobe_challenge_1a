@@ -88,7 +88,7 @@ docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --ne
 #### For Windows Command Prompt (cmd.exe): 
 
 ```bash
-docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --network none adobechallenge1a:latest
+docker run --rm -v "%cd%\input:/app/input" -v "%cd%\output:/app/output" --network none adobechallenge1a:latest
 ```
 ### Step 4: Check the Output
 
