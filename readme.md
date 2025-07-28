@@ -64,7 +64,7 @@ Copy or move the PDF files you want to process into the `input/` directory at th
 This solution is designed for a **fully offline build**. The repository already contains all necessary Python packages in the `wheels/` folder. The `Dockerfile` is pre-configured to use this local cache, so no internet connection is required during the build process.
 
 Open a terminal in the project root and run:
-
+#### For Mac/ Windows :
 ```bash
 docker build --platform linux/amd64 -t adobechallenge1a:latest .
 ```
@@ -73,13 +73,22 @@ docker build --platform linux/amd64 -t adobechallenge1a:latest .
 ### Step 3: Run the Container
 
 Execute the following command to process the PDFs from your `input` folder and save the results to your `output` folder.
-
+#### For Mac:
 ```bash
 docker run --rm \
     -v "$(pwd)/input:/app/input" \
     -v "$(pwd)/output:/app/output" \
     --network none \
     adobechallenge1a:latest
+```
+#### For Windows PowerShell (Recommended):
+```bash
+docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --network none adobechallenge1a:latest
+```
+#### For Windows Command Prompt (cmd.exe): 
+
+```bash
+docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --network none adobechallenge1a:latest
 ```
 ### Step 4: Check the Output
 
