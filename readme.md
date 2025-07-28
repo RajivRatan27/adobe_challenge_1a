@@ -79,8 +79,8 @@ docker run --rm \
     -v "$(pwd)/input:/app/input" \
     -v "$(pwd)/output:/app/output" \
     --network none \
-    docstructurex:latest```
-
+    docstructurex:latest
+```
 ### Step 4: Check the Output
 
 The extracted JSON files, one for each input PDF, will now be available in the `output/` directory.
